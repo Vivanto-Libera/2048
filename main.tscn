@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://g5hhi65bppn2"]
+[gd_scene load_steps=3 format=3 uid="uid://g5hhi65bppn2"]
 
+[ext_resource type="Script" uid="uid://nt2t5u0t40fy" path="res://Main.cs" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bbf3ei1vy64y1" path="res://board.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_0xm2m")
 
 [node name="Board" parent="." instance=ExtResource("1_ig7tw")]
-script = null
 
 [node name="Score" type="Label" parent="."]
 anchors_preset = 5
@@ -19,3 +20,6 @@ theme_override_font_sizes/font_size = 28
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="GameOver" from="Board" to="." method="_on_board_game_over"]
+[connection signal="Merged" from="Board" to="." method="_on_board_merged"]
