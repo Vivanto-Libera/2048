@@ -181,6 +181,10 @@ public partial class Board : Node
     }
     private void MoveRight()
     {
+		if(emptyTileNumber != 0) 
+		{
+			return;
+		}
         for (int i = 0; i < 4; i++)
         {
             int[] newLine = MoveLine(tiles[i, 0].number, tiles[i, 1].number,
@@ -192,6 +196,30 @@ public partial class Board : Node
         }
     }
 
+	private void IsLose() 
+	{
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+				if (i < 3)
+				{
+					if (tiles[i, j] == tiles[i + 1, j])
+					{
+						return;
+					}
+				}
+				if (j < 3)
+				{
+					if (tiles[i, j] == tiles[i, j + 1])
+					{
+						return;
+					}
+				}
+            }
+        }
+		EmitSignal(SignalName.GameOver);
+    }
     public override void _Ready()
 	{
 		initTiles();
@@ -227,5 +255,28 @@ public partial class Board : Node
 	}
 	public override void _Process(double delta)
 	{
-	}
+        if (Input.IsActionPressed("Up"))
+        {
+			MoveUp();
+			IsLose();
+        }
+
+        if (Input.IsActionPressed("Down"))
+        {
+            MoveDown();
+            IsLose();
+        }
+
+        if (Input.IsActionPressed("Left"))
+        {
+            MoveLeft();
+            IsLose();
+        }
+
+        if (Input.IsActionPressed("Right"))
+        {
+            MoveRight();
+            IsLose();
+        }
+    }
 }
