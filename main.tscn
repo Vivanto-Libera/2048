@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbf3ei1vy64y1"]
+[gd_scene load_steps=2 format=3 uid="uid://g5hhi65bppn2"]
 
-[ext_resource type="Script" uid="uid://cb20yy1075om2" path="res://Main.cs" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://bqr7a60maeans" path="res://tile.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bbf3ei1vy64y1" path="res://board.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_0xm2m")
 
-[node name="Tile" parent="." instance=ExtResource("2_h2yge")]
+[node name="Board" parent="." instance=ExtResource("1_ig7tw")]
+script = null
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -325.0
+offset_right = 325.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

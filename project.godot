@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="2048"
-run/main_scene="uid://bbf3ei1vy64y1"
+run/main_scene="uid://g5hhi65bppn2"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=640
+window/size/viewport_width=650
+window/size/viewport_height=690
 
 [dotnet]
 
