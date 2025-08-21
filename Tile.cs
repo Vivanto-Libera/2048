@@ -39,10 +39,4 @@ public partial class Tile : Label
 		setColor(newNumber);
 		setText(newNumber);
 	}
-	public override void _Ready()
-	{
-	}
-	public override void _Process(double delta)
-	{
-	}
 }

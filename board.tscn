@@ -1,119 +1,102 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbf3ei1vy64y1"]
 
+[ext_resource type="Script" uid="uid://ctd3p3hsh4wuh" path="res://Board.cs" id="1_psm7c"]
 [ext_resource type="PackedScene" uid="uid://bqr7a60maeans" path="res://tile.tscn" id="2_h2yge"]
 
-[sub_resource type="CSharpScript" id="CSharpScript_nd4as"]
-script/source = "using Godot;
-using System;
-
-public partial class Main : Node
-{
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-}
-"
-
 [node name="Board" type="Node"]
-script = SubResource("CSharpScript_nd4as")
+script = ExtResource("1_psm7c")
 
-[node name="A1" parent="." instance=ExtResource("2_h2yge")]
+[node name="A0" parent="." instance=ExtResource("2_h2yge")]
 offset_left = -315.0
 offset_top = 50.0
 offset_right = -165.0
+offset_bottom = -145.0
+
+[node name="A1" parent="." instance=ExtResource("2_h2yge")]
+offset_left = -155.0
+offset_top = 50.0
+offset_right = -5.0
 offset_bottom = -145.0
 
 [node name="A2" parent="." instance=ExtResource("2_h2yge")]
-offset_left = -155.0
+offset_left = 5.0
 offset_top = 50.0
-offset_right = -5.0
+offset_right = 155.0
 offset_bottom = -145.0
 
 [node name="A3" parent="." instance=ExtResource("2_h2yge")]
-offset_left = 5.0
-offset_top = 50.0
-offset_right = 155.0
-offset_bottom = -145.0
-
-[node name="A4" parent="." instance=ExtResource("2_h2yge")]
 offset_left = 165.0
 offset_top = 50.0
 offset_right = 315.0
 offset_bottom = -145.0
 
-[node name="B1" parent="." instance=ExtResource("2_h2yge")]
+[node name="B0" parent="." instance=ExtResource("2_h2yge")]
 offset_left = -315.0
 offset_top = 210.0
 offset_right = -165.0
+offset_bottom = 15.0
+
+[node name="B1" parent="." instance=ExtResource("2_h2yge")]
+offset_left = -155.0
+offset_top = 210.0
+offset_right = -5.0
 offset_bottom = 15.0
 
 [node name="B2" parent="." instance=ExtResource("2_h2yge")]
-offset_left = -155.0
+offset_left = 5.0
 offset_top = 210.0
-offset_right = -5.0
+offset_right = 155.0
 offset_bottom = 15.0
 
 [node name="B3" parent="." instance=ExtResource("2_h2yge")]
-offset_left = 5.0
-offset_top = 210.0
-offset_right = 155.0
-offset_bottom = 15.0
-
-[node name="B4" parent="." instance=ExtResource("2_h2yge")]
 offset_left = 165.0
 offset_top = 210.0
 offset_right = 315.0
 offset_bottom = 15.0
 
-[node name="C1" parent="." instance=ExtResource("2_h2yge")]
+[node name="C0" parent="." instance=ExtResource("2_h2yge")]
 offset_left = -315.0
 offset_top = 370.0
 offset_right = -165.0
+offset_bottom = 175.0
+
+[node name="C1" parent="." instance=ExtResource("2_h2yge")]
+offset_left = -155.0
+offset_top = 370.0
+offset_right = -5.0
 offset_bottom = 175.0
 
 [node name="C2" parent="." instance=ExtResource("2_h2yge")]
-offset_left = -155.0
-offset_top = 370.0
-offset_right = -5.0
-offset_bottom = 175.0
-
-[node name="C3" parent="." instance=ExtResource("2_h2yge")]
 offset_left = 5.0
 offset_top = 370.0
 offset_right = 155.0
 offset_bottom = 175.0
 
-[node name="C4" parent="." instance=ExtResource("2_h2yge")]
+[node name="C3" parent="." instance=ExtResource("2_h2yge")]
 offset_left = 165.0
 offset_top = 370.0
 offset_right = 315.0
 offset_bottom = 175.0
 
-[node name="D1" parent="." instance=ExtResource("2_h2yge")]
+[node name="D0" parent="." instance=ExtResource("2_h2yge")]
 offset_left = -315.0
 offset_top = 530.0
 offset_right = -165.0
 offset_bottom = 335.0
 
-[node name="D2" parent="." instance=ExtResource("2_h2yge")]
+[node name="D1" parent="." instance=ExtResource("2_h2yge")]
 offset_left = -155.0
 offset_top = 530.0
 offset_right = -5.0
 offset_bottom = 335.0
 
-[node name="D3" parent="." instance=ExtResource("2_h2yge")]
+[node name="D2" parent="." instance=ExtResource("2_h2yge")]
 offset_left = 5.0
 offset_top = 530.0
 offset_right = 155.0
 offset_bottom = 335.0
 
-[node name="D4" parent="." instance=ExtResource("2_h2yge")]
+[node name="D3" parent="." instance=ExtResource("2_h2yge")]
 offset_left = 165.0
 offset_top = 530.0
 offset_right = 315.0
