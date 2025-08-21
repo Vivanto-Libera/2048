@@ -14,7 +14,9 @@ public partial class Board : Node
 
 	private void GameStart() 
 	{
-		
+		ClearTiles();
+		CreatTile();
+		CreatTile();
 	}
 	private void ClearTiles() 
 	{
@@ -25,6 +27,7 @@ public partial class Board : Node
 				tiles[i, j].setNumber(0);
 			}
 		}
+		emptyTileNumber = 16;
 	}
 	private void CreatTile() 
 	{
@@ -49,7 +52,8 @@ public partial class Board : Node
 	}
 	public override void _Ready()
 	{
-		
+		initTiles();
+		GameStart();
 	}
 	private void initTiles() 
 	{
