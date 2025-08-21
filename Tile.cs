@@ -6,26 +6,24 @@ public partial class Tile : Label
 {
 	public int number
 	{
-		get
-		{
-			return number;
-		}
-		private set
-		{
-			number = value;
-			if (number != 0)
-			{
-				Text = number.ToString();
-			}
-			else
-			{
-				Text = "";
-			}
-		}
+		get;
+		private set;
 	}
 	public Tile() 
 	{
-		number = 0;
+		setNumber(0);
+	}
+	private void setText(int num) 
+	{
+		if(num != 0)
+
+			{
+			Text = num.ToString();
+		}
+		else
+		{
+			Text = "";
+		}
 	}
 	private void setColor(int newNumber) 
 	{
@@ -39,6 +37,7 @@ public partial class Tile : Label
 	{
 		number = newNumber;
 		setColor(newNumber);
+		setText(newNumber);
 	}
 	public override void _Ready()
 	{
