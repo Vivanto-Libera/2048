@@ -140,7 +140,6 @@ public partial class Board : Node
 			emptyTileNumber++;
 			EmitSignal(SignalName.Merged, b);
 		}
-		GD.Print(a, b, c, d);
 		int[] newLine = { a, b, c, d };
 		return newLine;
 	}

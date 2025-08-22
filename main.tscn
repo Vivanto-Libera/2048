@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://g5hhi65bppn2"]
+[gd_scene load_steps=4 format=3 uid="uid://g5hhi65bppn2"]
 
 [ext_resource type="Script" uid="uid://nt2t5u0t40fy" path="res://Main.cs" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bbf3ei1vy64y1" path="res://board.tscn" id="1_ig7tw"]
+
+[sub_resource type="SystemFont" id="SystemFont_0xm2m"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_0xm2m")
@@ -20,6 +22,29 @@ theme_override_font_sizes/font_size = 28
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GameOver" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_0xm2m")
+theme_override_font_sizes/font_size = 64
+text = "Game Over!"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
 
 [connection signal="GameOver" from="Board" to="." method="_on_board_game_over"]
 [connection signal="Merged" from="Board" to="." method="_on_board_merged"]
