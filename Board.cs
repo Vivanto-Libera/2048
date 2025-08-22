@@ -204,14 +204,14 @@ public partial class Board : Node
 			{
 				if (i < 3)
 				{
-					if (tiles[i, j] == tiles[i + 1, j])
+					if (tiles[i, j].number == tiles[i + 1, j].number)
 					{
 						return;
 					}
 				}
 				if (j < 3)
 				{
-					if (tiles[i, j] == tiles[i, j + 1])
+					if (tiles[i, j].number == tiles[i, j + 1].number)
 					{
 						return;
 					}
