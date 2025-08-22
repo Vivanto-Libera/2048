@@ -2,6 +2,7 @@
 利用Godot引擎复刻2048
 ## 前言
 大一学生做着玩的，做得很烂请见谅。
+GitHub账号：Vivanto-Libera，邮箱：1425078256@qq.com，GitHub仓库：https://github.com/Vivanto-Libera/2048
 ## 展示
 <img width="650" height="724" alt="image" src="https://github.com/user-attachments/assets/6e156cb3-f1cf-46b3-ae41-add843612f49" />
 就这样，很简陋。
